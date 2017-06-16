@@ -1,4 +1,5 @@
 目标：统计文件中指定字符串出现的次数，如计算f1.txt中“voidxin”出现了几次。
+
 1、maper类如下：
 ```
 public class VXWordCountMapper extends Mapper<LongWritable,Text , Text, Text> {
@@ -39,7 +40,9 @@ public class VXWordCountReducer extends Reducer<Text, Text, Text, IntWritable> {
 }
 ```
 
+
 3、main函数实现如下：
+
 ```
 public class VXWordCount {
 	public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
@@ -64,6 +67,7 @@ public class VXWordCount {
 ```
 
 最后导出jar包，运行：
+
 1:从mac本地拷贝到linux虚拟机系统指定的文件夹中，之后的命令输入都是基于在testfile目录下的
 ```
 cp ***.jar /home/testfile 
